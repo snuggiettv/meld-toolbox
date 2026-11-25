@@ -1,4 +1,4 @@
-# MELD Toolbox · Web 0.9.7
+# MELD Toolbox · Web 0.9.9
 
 A free community tool for managing MELD Studio sessions in your browser.
 
@@ -11,6 +11,9 @@ In MELD Studio, choose **File → Export Session** and save the `.json` file. Ke
 | Backups & Portable | Bundle all or selected scenes and their local media. Prepare backups for MELD by updating media paths, then verify extracted files. |
 | Import & Merge | Copy scenes from one exported session into another. |
 | Export Scenes | Save selected scenes and their required dependencies. |
+
+## Canvas support
+MELD session JSON version 3: Main-only sessions (empty or absent `verticalScenes`), paired Main and Portrait sessions, and sessions with Portrait disabled but saved paired layouts. The canvas setting and stored layouts are preserved on export and backup. Merges support Main-only and dual-canvas destinations, with independent Main/Portrait selection per source scene. Required Duplicator layouts are automatically included, or block the import if the destination cannot retain them. New scenes in paired sessions get an empty counterpart for an unselected layout; existing unselected layouts are preserved under Merge and Overwrite. Keep Both creates a separate scene; Skip retains the destination. Canvas visibility stays unchanged. Shared audio routing is retained for partial overwrites where possible; review the mixer. Empty counterparts use the known MELD v3 layout structure and destination dimensions. Native MELD import testing is recommended before production use. Malformed pairs, unsupported layer types and unsafe dependency changes remain blocked in selective operations.
 
 ## Media packages
 1. Open an exported session JSON and scan all or selected scenes.
