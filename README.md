@@ -1,4 +1,4 @@
-# MELD Toolbox · Web 0.9.6
+# MELD Toolbox · Web 0.9.7
 
 A free community tool for managing MELD Studio sessions in your browser.
 
@@ -8,7 +8,7 @@ In MELD Studio, choose **File → Export Session** and save the `.json` file. Ke
 
 | Tool | What it does |
 | --- | --- |
-| Backups & Portable | Bundle all or selected scenes and their local media. Restore packages and verify extracted files. |
+| Backups & Portable | Bundle all or selected scenes and their local media. Prepare backups for MELD by updating media paths, then verify extracted files. |
 | Import & Merge | Copy scenes from one exported session into another. |
 | Export Scenes | Save selected scenes and their required dependencies. |
 
@@ -17,7 +17,7 @@ In MELD Studio, choose **File → Export Session** and save the `.json` file. Ke
 2. Choose media folders and review matched paths, file sizes and the estimated ZIP size.
 3. Resolve missing or oversized files, or explicitly allow manual media copies. You may mark additional files for manual copying to reduce the ZIP size. A manual-copy package is incomplete until all listed files are copied.
 4. Save the ZIP. Keep `REQUIRED MEDIA.txt` and any manual media files with your backup; the list gives the original source and unique relative destination for each file.
-5. Restore the original package using this website, entering the exact full extraction folder path. Extract the resulting ZIP directly into that folder. Copy manual media to the exact paths listed in `RESTORE INSTRUCTIONS.txt` (create `Manual Media` if needed). Keep manually copied media with your backup if moving it elsewhere.
+5. Open **Prepare a Backup for MELD** and choose the original backup ZIP. Enter the exact full path of the folder where you intend to extract it. Toolbox rewrites media paths in session.json and downloads a new ZIP; it does not extract files. In File Explorer, use Extract All to extract the new ZIP directly into that folder (no extra nested folder). If the location changes, prepare the original ZIP again. Copy manual media to the exact paths listed in `RESTORE INSTRUCTIONS.txt` (create `Manual Media` if needed). Keep manually copied media with your backup if moving it elsewhere.
 6. Use Verify extracted folder and confirm the actual folder path. Included files are checked by SHA-256; manual files are checked for presence and known size only. Check manual contents yourself. Test the restored `session.json` in MELD before going live.
 
 ## Privacy and limits
