@@ -22,7 +22,7 @@
   if(!Object.hasOwn(routes,key))key='home';
   if(active===key)return;
   if(key!=='home'&&!frames.has(key)){
-   const f=document.createElement('iframe');f.title=names[key];f.className='workspace-frame';f.hidden=true;f.src=routes[key]+'?v=0912';frames.set(key,f);deck.append(f);
+   const f=document.createElement('iframe');f.title=names[key];f.className='workspace-frame';f.hidden=true;f.src=routes[key]+'?v=0913';frames.set(key,f);deck.append(f);
   }
   home.hidden=key!=='home';deck.hidden=key==='home';
   for(const [k,f] of frames)f.hidden=k!==key;

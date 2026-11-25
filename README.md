@@ -1,4 +1,4 @@
-# MELD Toolbox · Web 0.9.12
+# MELD Toolbox · Web 0.9.13
 
 A free community tool for managing MELD Studio sessions in your browser.
 
@@ -36,3 +36,6 @@ Widget (`MeldStudio/Widget`) and Game Capture (`MeldStudio/Game capture`) are no
 All file processing happens in your browser. Your files are not uploaded. Review private URLs and original file paths before sharing exports. Package session JSONs are limited to 32 MiB; merge and scene export JSONs to 50 MiB. ZIPs are uncompressed, limited to 1 GiB total, with a 256 MiB per-file inclusion limit. The estimate is conservative and may overcount duplicate files; manual copying or smaller scene selections can reduce the size. Browser memory, unreadable files or unsupported session structures can stop creation. Remote assets, fonts, external scripts and hardware setup are not bundled. The browser cannot read the absolute extraction folder path automatically. Previously created web packages can still be restored.
 
 Community tool; not affiliated with or endorsed by MELD Studio.
+
+## Feedback and support
+Developer & Point of Contact: Discord **@Snuggie**. Questions, bug reports and feature suggestions welcome.
