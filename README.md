@@ -1,4 +1,4 @@
-# MELD Toolbox · Web 0.9.11
+# MELD Toolbox · Web 0.9.12
 
 A free community tool for managing MELD Studio sessions in your browser.
 
@@ -11,6 +11,9 @@ In MELD Studio, choose **File → Export Session** and save the `.json` file. Ke
 | Backups & Portable | Bundle all or selected scenes and their local media. Prepare backups for MELD by updating media paths, then verify extracted files. |
 | Import & Merge | Copy scenes from one exported session into another. |
 | Export Scenes | Save selected scenes and their required dependencies. |
+
+## Keep your workspace open
+Switch tools or return Home without losing loaded files, scene and canvas selections, merge rules, previews, folder selections or package inputs. Each tool keeps its own live workspace in the same browser tab. Files are held in memory, not saved to local storage or uploaded. Reloading, closing the tab, or using Clear workspace removes the live state; download your results first. Opening another browser tab creates a separate workspace.
 
 ## Merge preview
 Matching scenes are detected by name or identifier. When there are no matches, bulk conflict controls are disabled and new scenes are added. When matches exist, bulk policy changes show the number affected. After a successful preview, the live before/after diagram shows the actual destination and output scene layouts, including new copies, merged and overwritten scenes, skipped imports, required layouts and empty counterparts. Shared audio and device settings are reported separately. The original files are unchanged.
