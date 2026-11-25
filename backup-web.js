@@ -7,7 +7,7 @@ file.addEventListener('change',async()=>{
  if(!f){message('Choose your exported session to begin.');return;}
  message('Checking session file…');
  try{
-  if(f.size>50*1024*1024)throw Error('Session JSON exceeds the 50 MB browser limit. Use the desktop edition.');
+  if(f.size>50*1024*1024)throw Error('Session JSON is larger than the 50 MB limit. Export a smaller session and try again.');
   const doc=JSON.parse((await f.text()).replace(/^\uFEFF/,''));
   if(!doc||typeof doc.session!=='object'||!Array.isArray(doc.session?.scenes))throw Error('Choose a MELD session JSON saved using File → Export Session.');
   if(seq!==revision)return;
