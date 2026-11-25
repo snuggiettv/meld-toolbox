@@ -1,7 +1,7 @@
-/* MELD Toolbox 0.9.8 - single/dual canvas audit and selective export. */
+/* MELD Toolbox 0.9.10 - single/dual canvas audit and selective export. */
 (function(root){'use strict';
 const copy=x=>JSON.parse(JSON.stringify(x));const assert=(b,m)=>{if(!b)throw Error(m)};
-const types=new Set(['Image','Media source','Duplicator','Spark Element','Browser','Text','Video device','Rectangle','Group','Display capture'].map(t=>'MeldStudio/'+t));
+const types=new Set(['Image','Media source','Duplicator','Spark Element','Browser','Text','Video device','Rectangle','Group','Display capture','Widget','Game capture'].map(t=>'MeldStudio/'+t));
 const allowedSession=new Set(['audioTrackSceneMatrixSettings','audioTracks','currentScene','sceneTransition','scenes','version','verticalCanvasEnabled','verticalCanvasWasEnabledOnce','verticalSceneTransition','verticalScenes','verticalTransitionMirroring','verticalVirtualCamera','videoCaptureDevices']);
 const refKeys=new Set(['id','linkedSceneId','sourceSceneId','sourceItemId','audioTrackId','sceneId','currentScene']);
 function walk(o,fn){if(Array.isArray(o))o.forEach(x=>walk(x,fn));else if(o&&typeof o==='object'){fn(o);Object.values(o).forEach(x=>walk(x,fn));}}
